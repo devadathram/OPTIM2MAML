@@ -1,0 +1,30 @@
+dataset:
+  adc_path: "../Dataset/training2022/new_adc"
+  groundtruth_path: "../Dataset/training2022/new_ot"
+  k_shots: 5
+
+model:
+  name: "UNET"
+  in_channels: 1
+  out_channels: 1
+
+training:
+  episodes: 200
+  inner_steps: 5
+  optimizer:
+    type: "adam"
+    lr: 0.001
+  maml:
+    inner_lr: 0.01
+    first_order: true
+  loss_fn:
+    bce_weight: 0.5
+    dice_weight: 0.5
+  save_path: "../Models/best_maml_model(5 shot 2022 - adc).pth"
+
+clustering:
+  num_tasks: 3
+
+
+
+

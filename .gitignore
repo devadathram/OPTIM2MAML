@@ -1,0 +1,34 @@
+# Ignore Python cache and compiled files
+__pycache__/
+*.py[cod]
+*.so
+
+# Ignore virtual environment folders
+env/
+.venv/
+
+# Ignore model folders
+Models/
+SOURCE_META_PSO/
+TestingFiles/
+
+# Ignore dataset or old data
+OldDataset/
+logs/
+*.log
+
+# Ignore model weights and temporary files
+*.h5
+*.keras
+*.pth
+*.ckpt
+*.pt
+*.tmp
+*.npy
+*.npz
+
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+.idea/

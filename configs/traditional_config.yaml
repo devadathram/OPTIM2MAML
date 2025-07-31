@@ -1,0 +1,19 @@
+dataset:
+  adc_path: "../Dataset/training2017/saved_adc"
+  groundtruth_path: "../Dataset/training2017/saved_ot"
+  image_size: [256, 256]
+
+training:
+  device: "cuda"
+  optimizer:
+    type: "Adam"
+    learning_rate: 0.001
+  meta_epochs: 201
+  k_shot: 3
+  q_query: 1
+  save_path: "../Models/best_maml_model(3 shot).pth"
+
+unet_paths:
+  adc_path: "../Dataset/training2017/saved_adc"
+  groundtruth_path: "../Dataset/training2017/saved_ot"
+  save_model_path: "../Models/unet.pth"
